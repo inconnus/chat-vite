@@ -2,7 +2,7 @@ import React from 'react'
 
 const Sheet = () => {
   return (
-    <div>Sheet</div>
+    <div>Sheets</div>
   )
 }
 
