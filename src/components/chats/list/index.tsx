@@ -16,7 +16,7 @@ const List = () => {
     return (
         <Column sx={{ width: '340px', minWidth: '300px', flexShrink: 0, overflowY: 'scroll', borderRight: `1px solid ${theme.color.border.primary}` }}>
             {lastChat?.map((item, index) => (
-                <ListItem key={index} name={item.name} message={item.message} time={item.time} tags={item.tags} profile={item.profile} />
+                <ListItem key={item.userId} name={item.name} message={item.message} time={item.time} tags={item.tags} profile={item.profile} />
             ))}
         </Column>
     )

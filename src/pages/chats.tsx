@@ -19,10 +19,10 @@ function App() {
         const temp = [...prev]
         const findIndex = temp.findIndex(item => item.userId === data.source?.userId)
         if (findIndex === -1) {
-          temp.splice(0, 0, { userId: data.source?.userId, name: 'John Doe', message: data?.message?.text, time: '10:00', tags: ['urgent'], profile: 'https://sprofile.line-scdn.net/0hKv1Zm7b6FFkcIz5Mf_FqJmxzFzM_Uk1LZ0Vcb3wnTW10ElAHNUAOPC0mS2kjR1VfZU1SNikkTW4QMGM_AnXobRsTSm4lFlsGN0Zcuw/preview' })
+          temp.splice(0, 0, { userId: data.source?.userId, name: 'Arsapol', message: data?.message?.text, time: '10:00', tags: ['urgent'], profile: 'https://sprofile.line-scdn.net/0hKv1Zm7b6FFkcIz5Mf_FqJmxzFzM_Uk1LZ0Vcb3wnTW10ElAHNUAOPC0mS2kjR1VfZU1SNikkTW4QMGM_AnXobRsTSm4lFlsGN0Zcuw/preview' })
 
         } else {
-          temp[findIndex] = { userId: data.source?.userId, name: 'John Doe', message: data?.message?.text, time: '10:00', tags: ['urgent'], profile: 'https://sprofile.line-scdn.net/0hKv1Zm7b6FFkcIz5Mf_FqJmxzFzM_Uk1LZ0Vcb3wnTW10ElAHNUAOPC0mS2kjR1VfZU1SNikkTW4QMGM_AnXobRsTSm4lFlsGN0Zcuw/preview' }
+          temp[findIndex] = { userId: data.source?.userId, name: 'Arsapol', message: data?.message?.text, time: '10:00', tags: ['urgent'], profile: 'https://sprofile.line-scdn.net/0hKv1Zm7b6FFkcIz5Mf_FqJmxzFzM_Uk1LZ0Vcb3wnTW10ElAHNUAOPC0mS2kjR1VfZU1SNikkTW4QMGM_AnXobRsTSm4lFlsGN0Zcuw/preview' }
         }
         return temp
       })

@@ -20,11 +20,10 @@ const router = createBrowserRouter([
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <ThemeProvider>
-      <RecoilRoot>
-        <RouterProvider router={router} />
-      </RecoilRoot>
-    </ThemeProvider>
-  </StrictMode>,
+  <ThemeProvider>
+    <RecoilRoot>
+      <RouterProvider router={router} />
+    </RecoilRoot>
+  </ThemeProvider>
+
 )

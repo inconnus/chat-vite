@@ -1,12 +1,12 @@
 import { Column, Image, Row, Text } from '@/dataslot-ui/components/base'
 import { useTheme } from '@emotion/react'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 const Tag = ({ label }: { label: string }) => <Text sx={{ border: '1px solid #0042E6', color: '#0042E6', fontSize: '15px', borderRadius: '20px', padding: '0 12px' }}>{label}</Text>
 const ListItem = ({ name, message, time, tags, profile }: { name: string, message: string, time: string, tags: string[], profile: string }) => {
     const theme = useTheme()
     return (
-        <Row sx={{ padding: '10px', gap: '10px', alignItems: 'center', cursor: 'pointer', ':hover': { backgroundColor: '#e9e9e9' } }}>
+        <Row sx={{ padding: '10px', gap: '10px', alignItems: 'center',cursor: 'pointer', transition: 'all 0.2s', ':hover': { backgroundColor: '#e9e9e9' } }}>
             <Image alt='' src={profile} sx={{ borderRadius: '50%', width: '50px', height: '50px', flexShrink: 0 }} />
             <Column sx={{ flex: 1 }}>
                 <Text>{name}</Text>
@@ -24,4 +24,4 @@ const ListItem = ({ name, message, time, tags, profile }: { name: string, messag
         </Row>
     )
 }
-export default ListItem
+export default React.memo(ListItem)
