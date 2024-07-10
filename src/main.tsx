@@ -7,6 +7,7 @@ import Layout from './Layout.tsx'
 const App = lazy(() => import('./pages/chats'));
 const Sheet = lazy(() => import('./pages/chats'));
 import './styles/global.sass'
+import { RecoilRoot } from 'recoil';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <RecoilRoot>
+        <RouterProvider router={router} />
+      </RecoilRoot>
     </ThemeProvider>
   </StrictMode>,
 )

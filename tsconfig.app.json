@@ -21,6 +21,7 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noImplicitAny": false,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
