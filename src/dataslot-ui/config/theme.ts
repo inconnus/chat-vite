@@ -1,7 +1,7 @@
 export const theme = {
     color: {
         text: {
-            primary: '#999',
+            primary: '#555',
             secondary: '#292929'
         },
         border: {

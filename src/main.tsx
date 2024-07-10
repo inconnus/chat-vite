@@ -1,12 +1,13 @@
 import { lazy, StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
-const App = lazy(() => import('./App'));
-import './styles/global.sass'
-import ThemeProvider from './dataslot-ui/provider/index.tsx'
-import Navbar from './components/navbar.tsx'
+import ThemeProvider from './dataslot-ui/provider'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from './Layout.tsx'
-import Sheet from './components/Sheet.tsx'
+
+const App = lazy(() => import('./pages/chats'));
+const Sheet = lazy(() => import('./pages/chats'));
+import './styles/global.sass'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,7 +21,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-
       <RouterProvider router={router} />
     </ThemeProvider>
   </StrictMode>,
