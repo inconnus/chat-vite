@@ -1,6 +1,6 @@
-import React from 'react'
+import { lazy, StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+const App = lazy(() => import('./App'));
 import './styles/global.sass'
 import ThemeProvider from './dataslot-ui/provider/index.tsx'
 import Navbar from './components/navbar.tsx'
@@ -18,10 +18,10 @@ const router = createBrowserRouter([
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  <StrictMode>
     <ThemeProvider>
 
       <RouterProvider router={router} />
     </ThemeProvider>
-  </React.StrictMode>,
+  </StrictMode>,
 )
