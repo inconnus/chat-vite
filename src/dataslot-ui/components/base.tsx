@@ -1,9 +1,8 @@
 'use client'
-import React, { forwardRef, HTMLAttributes, InputHTMLAttributes, lazy, Suspense } from 'react'
+import React, { forwardRef, HTMLAttributes, InputHTMLAttributes } from 'react'
 import { CSSObject, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
-const FontAwesomeIcon = lazy(() => import('@fortawesome/react-fontawesome').then(module => ({ default: module.FontAwesomeIcon })));
-import { byPrefixAndName } from '@awesome.me/kit-190a9bf6af/icons'
+
 declare module '@emotion/react' {
     export interface Theme {
         color: {
@@ -52,7 +51,7 @@ export const Text = styled.p<UIProps & { maxLine?: number }>(props => ({ ...(pro
 
 export const Input = styled.input<UIProps>(props => props?.sx)
 
-export const Textarea = styled.textarea<UIProps>(props => ({ resize: 'none', border: 'none', outline: 'none', ...props?.sx }))
+export const Textarea = styled.textarea<UIProps>(props => ({ resize: 'none', border: 'none', outline:'none',...props?.sx }))
 
 export const Image = styled.img<UIProps>(props => props?.sx)
 
@@ -63,9 +62,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps & React.ButtonHT
 export const Icon: React.FC<React.HTMLAttributes<HTMLElement> & UIProps & { icon: string }> = ({ icon, sx, ...props }) => {
     return (
         <Row sx={{ justifyContent: 'center', alignItems: 'center', ...sx }} {...props}>
-            <Suspense>
-                <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />
-            </Suspense>
+            <i className={icon} />
         </Row>
     )
 }
