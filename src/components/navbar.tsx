@@ -21,7 +21,7 @@ const Navbar = () => {
     const theme = useTheme()
     return (
         <Column sx={{ width: '50px', padding: '10px', backgroundColor: theme.color.background.primary, alignItems: 'center' }} as={'nav'}>
-            <Image src={`https://profile.line-scdn.net/0hxGy1WQe_J2hESAyhw29YP3gNKQUzZiEgPCs6C2YcLQw-f2k5fy46DWhKLF45fmc5eS1qW2MfeAxg`} sx={{ width: '35px', marginBottom: '5px', height: '35px', borderRadius: '50%', border: '1.5px solid #FFF' }} alt='logo' width={50} height={50} />
+            <Image loading="lazy" src={`https://profile.line-scdn.net/0hxGy1WQe_J2hESAyhw29YP3gNKQUzZiEgPCs6C2YcLQw-f2k5fy46DWhKLF45fmc5eS1qW2MfeAxg`} sx={{ width: '35px', marginBottom: '5px', height: '35px', borderRadius: '50%', border: '1.5px solid #FFF' }} alt='logo' width={50} height={50} />
             <IconLink icon='fa-solid fa-comment-dots' href={`/${mid}/chats`} label='chats' />
             <IconLink icon='fa-solid fa-file-spreadsheet' href={`/${mid}/sheets`} label='sheets' />
         </Column>

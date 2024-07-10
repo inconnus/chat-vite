@@ -7,7 +7,7 @@ const ListItem = ({ name, message, time, tags, profile }: { name: string, messag
     const theme = useTheme()
     return (
         <Row sx={{ padding: '10px', gap: '10px', alignItems: 'center',cursor: 'pointer', transition: 'all 0.2s', ':hover': { backgroundColor: '#e9e9e9' } }}>
-            <Image alt='' src={profile} sx={{ borderRadius: '50%', width: '50px', height: '50px', flexShrink: 0 }} />
+            <Image loading="lazy" alt='' src={profile} sx={{ borderRadius: '50%', width: '50px', height: '50px', flexShrink: 0 }} />
             <Column sx={{ flex: 1 }}>
                 <Text>{name}</Text>
                 <Text maxLine={1} sx={{ color: '#555' }}> {message}</Text>
