@@ -4,8 +4,8 @@ import ThemeProvider from './dataslot-ui/provider'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from './Layout.tsx'
 
-const App = lazy(() => import('./pages/chats'));
-const Sheet = lazy(() => import('./pages/sheets'));
+const Chats = lazy(() => import('./pages/chats'));
+const Sheets = lazy(() => import('./pages/sheets'));
 import './styles/global.sass'
 import { RecoilRoot } from 'recoil';
 
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      { path: '/:mid/chats', element: <Suspense fallback={<div></div>}><App /></Suspense> },
-      { path: '/:mid/sheets', element: <Suspense fallback={<div></div>}><Sheet /></Suspense> },
+      { path: '/:mid/chats', element: <Suspense fallback={<div></div>}><Chats /></Suspense> },
+      { path: '/:mid/sheets', element: <Suspense fallback={<div></div>}><Sheets /></Suspense> },
     ],
   },
 ]);
